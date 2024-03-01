@@ -80,7 +80,7 @@ async function getMicrodata() {
     console.log(mapLinks);
     console.log(fridges);
 
-    for (let item of fridges.slice(0,1)) {
+    for (let item of fridges) {
         const productId = item.match(/(?<=product.)[0-9a-z]{8}/gm)[0];
         page.on('request', interReq => {
             // if (interReq.isInterceptResolutionHandled()) return;
